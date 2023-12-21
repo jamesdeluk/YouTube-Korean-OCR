@@ -5,6 +5,6 @@ pngs=glob.glob("frames/*.png")
 text=reader.readtext_batched(pngs,detail=0)
 res=[]
 [res.append(x) for x in text if x not in res]
-with open ('ocr.txt','w') as f:
+with open ('ocr.txt'',encoding='utf-8') as f:
     for line in res:    
          f.write(" ".join(line) + "\n")
